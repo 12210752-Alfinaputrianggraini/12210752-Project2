@@ -11,17 +11,13 @@ class DashboardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final panels = [
-      BerandaPanel(), 
-      BeritaPanel(), 
-      PengaturanPanel()];
+    final panels = [BerandaPanel(), BeritaPanel(), PengaturanPanel()];
 
-    return Consumer<DashboardProvider>(
-      builder: (context, prov, w) {
-        return Scaffold(
+    return Consumer<DashboardProvider>(builder: (context, prov, w) {
+      return Scaffold(
           bottomNavigationBar: BottomNavigationBar(
               onTap: (value) {
-              prov.ubahTab(value);
+                prov.ubahTab(value);
               },
               currentIndex: prov.tabaktif,
               items: [
@@ -32,10 +28,7 @@ class DashboardView extends StatelessWidget {
                 BottomNavigationBarItem(
                     icon: Icon(FontAwesomeIcons.gear), label: 'Pengaturan')
               ]),
-          body: panels[prov.tabaktif]
-          
-        );
-      }
-    );
+          body: panels[prov.tabaktif]);
+    });
   }
 }

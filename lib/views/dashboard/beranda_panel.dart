@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class BerandaPanel extends StatelessWidget {
   const BerandaPanel({
     super.key,
@@ -54,7 +55,6 @@ class BerandaPanel extends StatelessWidget {
     );
   }
 }
-
 
 class _TombolMenu extends StatelessWidget {
   final String gambar;
@@ -189,7 +189,7 @@ class _backgroundDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      'assets/bg.png',
+      'assets/background.png',
       height: 300,
       width: double.infinity,
       fit: BoxFit.cover,

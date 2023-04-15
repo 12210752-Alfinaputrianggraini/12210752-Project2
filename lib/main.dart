@@ -9,6 +9,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (bc) => DashboardProvider()),
         ChangeNotifierProvider(create: (bc) => BeritaPanelProvider()),
+        ChangeNotifierProvider(create: (bc) => BeritaLoadDataProvider()),
       ],
       builder: (context, Widget) {
         return const MaterialApp(home: LoginView());
